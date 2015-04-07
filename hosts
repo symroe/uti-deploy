@@ -1,0 +1,8 @@
+[remote:children]
+production
+
+[servers:children]
+production
+
+[production]
+spud nickname=production vm=0 branch=master domain=www.undertheinfluence.org.uk

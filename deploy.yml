@@ -1,0 +1,24 @@
+---
+- hosts: servers
+  vars_files:
+    - vars.yml
+  gather_facts: false
+  sudo: true
+  sudo_user: "{{ project_name }}"
+
+  tasks:
+  - name: Pull sources from the repository.
+    git:
+      repo: "{{ project_repo }}"
+      dest: "{{ project_root }}/code/"
+      version: "{{ branch }}"
+      accept_hostkey: true
+    notify:
+      - restart web frontend
+      - restart nginx
+
+  - name: Upgrade the virtualenv.
+    pip: requirements={{ project_root }}/code/requirements.txt virtualenv={{ project_root }}/env/ extra_args='-U'
+
+  handlers:
+    - include: handlers.yml

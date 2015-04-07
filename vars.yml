@@ -1,0 +1,31 @@
+---
+project_name: spud
+project_root: /var/www/spud
+app_name: spud
+project_repo: https://github.com/spudmind/spud.git
+alias_domains: ["undertheinfluence.org.uk"]
+system_packages:
+  - build-essential
+  - git
+  - libevent-dev
+  - libncurses5-dev
+  - libxml2-dev
+  - libxslt1-dev
+  - nginx
+  - postfix
+  - python-dev
+  - python-numpy
+  - python-psycopg2
+  - python-setuptools
+  - libjpeg-dev
+  - libpng12-dev
+  - libpng3
+  - libfreetype6
+  - libfreetype6-dev
+  - zlib1g-dev
+  - python-pil
+python_packages:
+  - pip
+  - virtualenv
+initfiles:
+  - gunicorn
