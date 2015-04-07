@@ -2,7 +2,7 @@
 project_name: spud
 project_root: /var/www/spud
 app_name: spud
-project_repo: https://github.com/spudmind/spud.git
+project_repo: https://github.com/spudmind/undertheinfluence.git
 alias_domains: ["undertheinfluence.org.uk"]
 system_packages:
   - build-essential

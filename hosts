@@ -5,4 +5,4 @@ production
 production
 
 [production]
-spud nickname=production vm=0 branch=master domain=www.undertheinfluence.org.uk
+uti nickname=production vm=0 branch=master domain=www.undertheinfluence.org.uk
